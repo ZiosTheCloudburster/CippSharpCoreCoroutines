@@ -1,0 +1,15 @@
+{
+    "name": "com.CippSharpCore.Coroutines.Samples",
+    "references": [
+        "GUID:3470bdcd7b874954681f964eae57dda1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
