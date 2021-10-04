@@ -3,18 +3,8 @@ using UnityEngine;
 
 namespace CippSharp.Core.Coroutines
 {
-    public static class AnimatorUtils
+    public static class AnimatorTransitions
     {
-        /// <summary>
-        /// Retrieve a more contextual name for logs, based on type.
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        private static string LogName(System.Type type)
-        {
-            return $"[{type.Name}]: ";
-        }
-        
         #region Edit Parameters
         
         /// <summary>
@@ -26,9 +16,10 @@ namespace CippSharp.Core.Coroutines
         /// <param name="duration"></param>
         /// <param name="onComplete"></param>
         /// <param name="debugContext"></param>
-        public static Coroutine MoveFloatParameter(Animator animator, int parameterId, float finalValue, float duration, CompletedCallback onComplete = null, Object debugContext = null)
+        public static Coroutine MoveFloatParameter(Animator animator, int parameterId, float finalValue, 
+            float duration, CompletedCallback onComplete = null, Object debugContext = null)
         {
-            string logName = debugContext != null ? LogName(debugContext.GetType()) : string.Empty;
+            string logName = debugContext != null ? LogUtils.LogName(debugContext.GetType()) : string.Empty;
             if (animator == null)
             {
                 Debug.LogError(logName+$"{nameof(MoveFloatParameter)} {nameof(animator)} is null!", debugContext);
@@ -57,7 +48,7 @@ namespace CippSharp.Core.Coroutines
 
         private static IEnumerator MoveFloatParameterCoroutineInternal(Animator animator, int parameterId, float currentValue, float finalValue, float duration, CompletedCallback onComplete = null, Object debugContext = null)
         {
-            string logName = debugContext != null ? LogName(debugContext.GetType()) : string.Empty;
+            string logName = debugContext != null ? LogUtils.LogName(debugContext.GetType()) : string.Empty;
             
             if (duration <= 0.0f)
             {
