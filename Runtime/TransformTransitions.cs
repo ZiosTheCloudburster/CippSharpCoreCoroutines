@@ -27,7 +27,7 @@ namespace CippSharp.Core.Coroutines
             ScaleZ,
         }
         
-        public static Coroutine MoveFloatParameter(Transform transform, Space space, sbyte parameterId, float finalValue, 
+        public static Coroutine MoveFloatParameter(Transform transform, Space space, sbyte parameterId, float currentValue, float finalValue, 
             float duration, CompletedCallback onComplete = null, Object debugContext = null)
         {
             string logName = debugContext != null ? LogUtils.LogName(debugContext.GetType()) : string.Empty;
@@ -37,8 +37,7 @@ namespace CippSharp.Core.Coroutines
                 onComplete?.Invoke(false);
                 return null;
             }
-
-            float currentValue = GetFloat(transform, space, parameterId);
+            
             return MoveFloatParameterInternal(transform, space, parameterId, currentValue, finalValue, duration, onComplete, debugContext);
         }
 
