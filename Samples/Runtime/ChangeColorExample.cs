@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace CippSharp.Core.Coroutines.Samples
 {
-   public class ChangeColorExample : MonoBehaviour
+#pragma warning disable 649
+   internal class ChangeColorExample : MonoBehaviour
    {
       #region Custom RendererContainer
          
@@ -66,5 +67,6 @@ namespace CippSharp.Core.Coroutines.Samples
          container.ChangeColorAfterTime(changeColorDelay, newColor);
       }
    }
+#pragma warning restore 649
 }
 #endif

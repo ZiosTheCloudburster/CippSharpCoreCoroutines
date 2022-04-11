@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CippSharp.Core.Coroutines.Samples
 {
-    public class InactiveObjectExample : MonoBehaviour
+    internal class InactiveObjectExample : MonoBehaviour
     {
         [TextArea(1, 5)]
         public string info = "";

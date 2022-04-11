@@ -17,7 +17,7 @@ namespace CippSharp.Core.Coroutines.Samples
     /// this wasn't an example.
     /// </summary>
 #pragma warning disable 414
-    public class StartStopCoroutineExample : MonoBehaviour
+    internal class StartStopCoroutineExample : MonoBehaviour
     {
         [TextArea(1, 5)]
         public string info = "";
