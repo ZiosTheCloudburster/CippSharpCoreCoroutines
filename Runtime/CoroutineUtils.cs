@@ -56,7 +56,7 @@ namespace CippSharp.Core.Coroutines
         [RuntimeInitializeOnLoadMethod]
         private static void Initialize()
         {
-            m_container = new GameObject(nameof(CoroutineUtils)+":"+nameof(CoroutinesContainer), new Type[] {typeof(CoroutinesContainer)}).GetComponent<CoroutinesContainer>();
+            m_container = new GameObject(nameof(CoroutineUtils)+"."+nameof(CoroutinesContainer), new Type[] {typeof(CoroutinesContainer)}).GetComponent<CoroutinesContainer>();
             Object.DontDestroyOnLoad(m_container.gameObject);
         }
         
