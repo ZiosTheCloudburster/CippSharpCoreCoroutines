@@ -3,6 +3,7 @@
 
 ## Version 1.0.2
 - updated readme
+- uses dot instead of ':'
 
 ## Version 1.0.1
 - moved some codes to relative repositories
