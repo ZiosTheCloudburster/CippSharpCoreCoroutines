@@ -1,6 +1,9 @@
 ## Version 1.0.X
 - minor changes and bug fixing
 
+## Version 1.0.2
+- updated readme
+
 ## Version 1.0.1
 - moved some codes to relative repositories
 
